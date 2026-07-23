@@ -203,9 +203,18 @@ h2.sec{font-size:44px;line-height:1.1;letter-spacing:-1px;margin-bottom:var(--sp
 .qa-redline .redline-item{background:#f8e3de;border-radius:var(--r-md);padding:var(--sp-lg);}
 .qa-redline .redline-title{font-size:13px;font-weight:600;color:var(--error);margin-bottom:6px;}
 .qa-redline .redline-text{font-size:14px;color:var(--body-strong);}
+/* operating delivery reminders */
+.op-reminders{margin-top:var(--sp-xxl);padding-top:var(--sp-xxl);border-top:1px solid var(--hairline);}
+.op-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-lg);margin-top:var(--sp-lg);}
+.op-card{background:var(--surface-dark);border-radius:var(--r-lg);padding:var(--sp-xl);}
+.op-card .op-num{font-family:var(--font-display);font-size:30px;color:var(--coral);}
+.op-card h3{font-family:var(--font-body);font-size:18px;font-weight:500;color:var(--on-dark);margin:4px 0 12px;}
+.op-card p{font-size:14px;color:var(--on-dark-soft);margin-bottom:10px;}
+.op-card .op-do{font-size:14px;color:var(--on-dark);line-height:1.65;}
+.op-card .op-do b{color:var(--coral);}
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;}.hero h1{font-size:44px;}
-  .grid3,.grid4,.grid2,.measure,.scope-grid,.scope-chain,.qa-grid,.qa-redline{grid-template-columns:1fr;}
+  .grid3,.grid4,.grid2,.measure,.scope-grid,.scope-chain,.qa-grid,.qa-redline,.op-grid{grid-template-columns:1fr;}
   h2.sec{font-size:32px;}
 }
 </style>
@@ -855,6 +864,31 @@ h2.sec{font-size:44px;line-height:1.1;letter-spacing:-1px;margin-bottom:var(--sp
   </div>
 
   <div class="warn-note"><b>每日自查五问：</b>老板在群吗？收费有文字记录吗？方案得到明确确认了吗？本周期的数据报告发了吗、有没有建议？客诉在 12 小时内响应并闭环了吗？五个问题有一个答不上来，就说明这家店的交付证据链还没完成。完整官方整理及两期整改名单见 <b>《运营交付质检-官方要求完整整理.md》</b>。</div>
+
+  <div class="op-reminders">
+    <div class="eyebrow">运营交付补充要求</div>
+    <h3 style="font-family:var(--font-body);font-size:22px;font-weight:500;color:var(--ink)">每个运营必须做到的 3 件事</h3>
+    <div class="op-grid">
+      <div class="op-card">
+        <div class="op-num">01</div>
+        <h3>四件套方案必须归档</h3>
+        <p>四件套方案不能只放在 C 盘、微信或临时文件夹，也不能做完后删除。</p>
+        <div class="op-do"><b>怎么做：</b>保存到 C 盘以外的本地磁盘，例如 D、E、F 盘；按“年 / 月 / 日 / 门店名”分层存放。示例：<b>D:\运营交付\四件套\2026\07\23\门店名</b>。文件名称写清门店、日期和内容，保证任何人都能随时找到。</div>
+      </div>
+      <div class="op-card">
+        <div class="op-num">02</div>
+        <h3>确认后，才能进入下一步</h3>
+        <p>方案发出后必须 @ 商家确认；商家没有明确回复，不能默认同意，更不能直接执行。</p>
+        <div class="op-do"><b>固定顺序：</b>方案发群并 @ 商家 → 商家文字确认 → 三件套和图片发群确认 → 商家确认 → <b>上线头像、店招和海报</b>。每一步确认记录都留在群里。</div>
+      </div>
+      <div class="op-card">
+        <div class="op-num">03</div>
+        <h3>周报固定每周一启动</h3>
+        <p>所有店铺都必须收到周报，不能只挑重点店、好数据店或方便沟通的店发送。</p>
+        <div class="op-do"><b>怎么做：</b>每周一开始向微信群发送全部店铺周报；工作量较大时可以分两天完成，但必须在<b>周一至周二</b>发完。发送后保留群内记录，并在周报中写明下一步建议。</div>
+      </div>
+    </div>
+  </div>
 </section>
 </div>
 
