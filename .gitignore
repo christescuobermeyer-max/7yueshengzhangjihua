@@ -1,0 +1,8 @@
+node_modules/
+.env
+.chrome-profile/
+.dingtalk-profile/
+output/
+*.log
+__pycache__/
+*.pyc
