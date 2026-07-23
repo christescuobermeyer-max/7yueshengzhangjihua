@@ -183,9 +183,29 @@ h2.sec{font-size:44px;line-height:1.1;letter-spacing:-1px;margin-bottom:var(--sp
 .scope-chain .chain-num{font-family:var(--font-display);font-size:28px;color:var(--coral);}
 .scope-chain .chain-title{font-weight:500;color:var(--ink);font-size:15px;margin:4px 0;}
 .scope-chain .chain-text{font-size:13px;color:var(--muted);line-height:1.6;}
+/* delivery QA */
+.qa-alert{background:var(--surface-dark);border-radius:var(--r-lg);padding:var(--sp-xl);color:var(--on-dark);margin-bottom:var(--sp-xl);}
+.qa-alert .qa-alert-title{font-family:var(--font-display);font-size:28px;color:var(--coral);margin-bottom:8px;}
+.qa-alert p{color:var(--on-dark-soft);max-width:900px;}
+.qa-alert b{color:var(--on-dark);}
+.qa-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-lg);}
+.qa-item{border-top:2px solid var(--coral);background:var(--surface-card);padding:var(--sp-xl);border-radius:0 0 var(--r-lg) var(--r-lg);}
+.qa-item .qa-num{font-family:var(--font-display);font-size:30px;color:var(--coral);}
+.qa-item h3{font-family:var(--font-body);font-size:18px;font-weight:500;color:var(--ink);margin:4px 0 10px;}
+.qa-item p{font-size:14px;color:var(--body);margin-bottom:8px;}
+.qa-item .qa-do{font-size:14px;color:var(--ink);font-weight:500;}
+.qa-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:var(--sp-xl);}
+.qa-table th,.qa-table td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--hairline);vertical-align:top;}
+.qa-table th{font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;background:var(--surface-soft);}
+.qa-table td{color:var(--body);}
+.qa-table td:first-child{font-weight:500;color:var(--ink);white-space:nowrap;}
+.qa-redline{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-md);margin-top:var(--sp-xl);}
+.qa-redline .redline-item{background:#f8e3de;border-radius:var(--r-md);padding:var(--sp-lg);}
+.qa-redline .redline-title{font-size:13px;font-weight:600;color:var(--error);margin-bottom:6px;}
+.qa-redline .redline-text{font-size:14px;color:var(--body-strong);}
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;}.hero h1{font-size:44px;}
-  .grid3,.grid4,.grid2,.measure,.scope-grid,.scope-chain{grid-template-columns:1fr;}
+  .grid3,.grid4,.grid2,.measure,.scope-grid,.scope-chain,.qa-grid,.qa-redline{grid-template-columns:1fr;}
   h2.sec{font-size:32px;}
 }
 </style>
@@ -760,6 +780,81 @@ h2.sec{font-size:44px;line-height:1.1;letter-spacing:-1px;margin-bottom:var(--sp
   <div class="step"><div class="n num">3</div><div class="t"><b>催新店核销</b><br>催上面9家已发券未核销的店尽快<b>核销</b>，再把消耗做到≥200并保持活跃。新店赛需凑够10家才进发钱档。</div></div>
   <div class="step"><div class="n num">4</div><div class="t"><b>按ID到后台操作</b><br>用可操作清单里的门店ID，在后台-广告管理-生长计划-数据明细中定位每家店，逐个跟进。</div></div>
   <div class="warn-note">⚠️ 需向平台小二核实的口径：渗透门店是否有最低消耗额门槛、6月环比基准渗透率确切值、渗透率分母是否有额外剔除。测算为估算值，以后台实时数据为准。</div>
+</section>
+</div>
+
+<!-- 运营交付质检 -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">运营交付质检 · 必须执行</div>
+  <h2 class="sec">平台质检到底检查什么</h2>
+  <p style="max-width:880px;color:var(--body);margin-bottom:var(--sp-xl)">平台检查的不是“运营有没有发过消息”，而是商户老板有没有真正收到、确认并持续得到服务。每家店都必须留下完整证据链：<b style="color:var(--ink)">老板在群 → 合作收费留痕 → 方案确认后执行 → 持续发数据和建议 → 客诉及时闭环。</b></p>
+
+  <div class="qa-alert">
+    <div class="qa-alert-title">这不是普通提醒</div>
+    <p>6 月一期质检发现 4 类共性问题，7 月二期又发现 5 类突出问题。平台明确表示：<b>已经通报过的问题再次出现，处罚会加重。</b>7 月二期停签名单中包含<b>湖北呈尚营销策划有限公司</b>，因此下面每一项都要落实到每个商户，不能只做抽查。</p>
+  </div>
+
+  <div class="qa-grid">
+    <div class="qa-item">
+      <div class="qa-num">01</div>
+      <h3>老板必须在企微服务群</h3>
+      <p>只拉店员或普通对接人不够；老板退群后继续发消息，也会被认定为交付没有真正送达。</p>
+      <div class="qa-do">执行：建群时拉老板或实际决策人；退群、换人后立即补回并在群里确认。</div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-num">02</div>
+      <h3>合作和收费必须群内留痕</h3>
+      <p>签约确认、收费金额、收费方式、服务周期不能只在私人微信或电话里说。换设备、账号迁移、聊天记录丢失都不能作为理由。</p>
+      <div class="qa-do">执行：把合作范围、收费和周期用文字发到企微服务群，保存可回看的群记录。</div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-num">03</div>
+      <h3>方案必须先确认，再执行</h3>
+      <p>不能方案发完就执行，不能不发方案，不能用电话口头确认，也不能把“老板没回复”当成“同意”。方案千店一面、名称模糊、不 @ 老板同样有风险。</p>
+      <div class="qa-do">执行：方案写清门店、月份和动作，发到企微群并 @ 老板，收到明确文字确认后再上线。</div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-num">04</div>
+      <h3>所有签约商户都要持续收到报告</h3>
+      <p>低营收、新签约商户也不能漏掉；不能只发一次后中断，不能整月不发，也不能只丢一张数据截图。</p>
+      <div class="qa-do">执行：日报、周报、月报三选一持续推送；每份报告写明数据结果、问题判断和下一步动作。</div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-num">05</div>
+      <h3>客诉要在群内及时闭环</h3>
+      <p>群里必须公示联系人和处理路径。不能让商户找不到人，不能隔 1 至 2 天不回复，更不能等平台小二反复催。</p>
+      <div class="qa-do">执行：记录受理时间、负责人、首次响应、处理过程、解决结果和商户确认。</div>
+    </div>
+    <div class="qa-item">
+      <div class="qa-num">06</div>
+      <h3>每一步都要能拿出证据</h3>
+      <p>质检时只说“电话沟通过”“以前发过”“设备换了”没有用；平台要看群内真实记录。</p>
+      <div class="qa-do">执行：方案确认、报告推送、客诉闭环全部留在企微群，确保随时可以按商户调取。</div>
+    </div>
+  </div>
+
+  <h3 style="font-family:var(--font-body);font-size:20px;font-weight:500;color:var(--ink);margin-top:var(--sp-xxl)">一条完整的运营交付记录应该长这样</h3>
+  <div class="scroll-x">
+    <table class="qa-table">
+      <thead><tr><th>交付节点</th><th>必须做什么</th><th>质检时要拿出的证据</th></tr></thead>
+      <tbody>
+        <tr><td>商户入群</td><td>建立企微服务群，拉入老板或实际决策人；老板退群后及时补回。</td><td>群成员记录、老板入群和身份确认消息</td></tr>
+        <tr><td>合作确认</td><td>把签约、收费、服务内容和周期用文字发在群里。</td><td>合作与收费确认的群聊记录</td></tr>
+        <tr><td>方案上线</td><td>方案名称清楚、结合门店情况，发送后 @ 老板并等到明确确认。</td><td>方案正文、@ 提醒、老板确认回复、执行时间</td></tr>
+        <tr><td>数据交付</td><td>所有商户纳入日报/周报/月报三选一；持续发送并附具体建议。</td><td>连续报告记录，以及“下一步做什么”的文字建议</td></tr>
+        <tr><td>客诉处理</td><td>群内公示联系人，及时响应，记录处理过程并让商户确认结果。</td><td>受理时间、首次响应、处理记录、结果和商户确认</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="qa-redline">
+    <div class="redline-item"><div class="redline-title">12 小时红线</div><div class="redline-text">客诉群内 12 小时没有响应，平台直接暂停新签。</div></div>
+    <div class="redline-item"><div class="redline-title">最多提醒 3 次</div><div class="redline-text">同一商户单次客诉超过 3 次提醒仍未闭环，直接暂停新签。</div></div>
+    <div class="redline-item"><div class="redline-title">重复问题加重处罚</div><div class="redline-text">6 月已经通报的问题在后续质检再次出现，处罚力度会加重。</div></div>
+  </div>
+
+  <div class="warn-note"><b>每日自查五问：</b>老板在群吗？收费有文字记录吗？方案得到明确确认了吗？本周期的数据报告发了吗、有没有建议？客诉在 12 小时内响应并闭环了吗？五个问题有一个答不上来，就说明这家店的交付证据链还没完成。完整官方整理及两期整改名单见 <b>《运营交付质检-官方要求完整整理.md》</b>。</div>
 </section>
 </div>
 
