@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>7月生长计划 · 代运营服务商</title>
+<style>
+:root{
+  --coral:#cc785c;--coral-active:#a9583e;--coral-disabled:#e6dfd8;--teal:#5db8a6;--amber:#e8a55a;
+  --canvas:#faf9f5;--surface-soft:#f5f0e8;--surface-card:#efe9de;--surface-cream-strong:#e8e0d2;
+  --surface-dark:#181715;--surface-dark-elevated:#252320;--surface-dark-soft:#1f1e1b;
+  --hairline:#e6dfd8;--hairline-soft:#ebe6df;
+  --ink:#141413;--body-strong:#252523;--body:#3d3d3a;--muted:#6c6a64;--muted-soft:#8e8b82;
+  --on-primary:#fff;--on-dark:#faf9f5;--on-dark-soft:#a09d96;
+  --success:#5db872;--warning:#d4a017;--error:#c64545;
+  --font-display:"Tiempos Headline",Georgia,serif;
+  --font-body:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+  --sp-xxs:4px;--sp-xs:8px;--sp-sm:12px;--sp-md:16px;--sp-lg:24px;--sp-xl:32px;--sp-xxl:48px;--sp-section:96px;
+  --r-xs:4px;--r-sm:6px;--r-md:8px;--r-lg:12px;--r-xl:16px;--r-full:9999px;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--canvas);color:var(--body);font-family:var(--font-body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+h1,h2,h3.disp{font-family:var(--font-display);font-weight:400;color:var(--ink);}
+.num{font-family:var(--font-body);font-variant-numeric:tabular-nums;}
+section{padding:var(--sp-section) 0;}
+.eyebrow{font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:var(--sp-md);}
+a{color:var(--coral);text-decoration:none;}
+/* header */
+.hd{height:64px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--hairline);}
+.hd .brand{display:flex;align-items:center;gap:10px;font-weight:600;color:var(--ink);font-size:16px;}
+.spike{width:14px;height:14px;background:var(--coral);clip-path:polygon(50% 0,100% 100%,0 100%);}
+.badge-pill{display:inline-block;background:var(--surface-card);color:var(--ink);font-size:13px;font-weight:500;padding:4px 12px;border-radius:var(--r-full);}
+.badge-coral{background:var(--coral);color:#fff;font-size:12px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;padding:4px 12px;border-radius:var(--r-full);}
+.badge-warn{background:#f7edcf;color:#8a6d10;font-size:13px;font-weight:500;padding:4px 12px;border-radius:var(--r-full);}
+.badge-ok{background:#dbf0df;color:#2f7d43;font-size:13px;font-weight:500;padding:4px 12px;border-radius:var(--r-full);}
+/* hero */
+.hero{display:grid;grid-template-columns:6fr 5fr;gap:48px;align-items:center;}
+.hero h1{font-size:64px;line-height:1.05;letter-spacing:-1.5px;margin-bottom:var(--sp-lg);}
+.hero .sub{font-size:20px;color:var(--body);margin-bottom:var(--sp-lg);}
+.hero .lead{font-size:16px;color:var(--muted);max-width:520px;}
+.kpi-hero{background:var(--surface-dark);color:var(--on-dark);border-radius:var(--r-lg);padding:var(--sp-xl);}
+.kpi-hero .lbl{font-size:13px;color:var(--on-dark-soft);letter-spacing:1px;text-transform:uppercase;}
+.kpi-hero .big{font-size:56px;font-weight:500;line-height:1.1;margin:8px 0;}
+.kpi-hero .delta{font-size:14px;color:var(--teal);}
+.kpi-hero hr{border:0;border-top:1px solid var(--surface-dark-elevated);margin:20px 0;}
+.kpi-hero .note{font-size:13px;color:var(--on-dark-soft);}
+/* grids & cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--sp-lg);}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-lg);}
+.grid2{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-lg);}
+.fcard{background:var(--surface-card);border-radius:var(--r-lg);padding:var(--sp-xl);}
+.fcard h3{font-family:var(--font-body);font-size:18px;font-weight:500;color:var(--ink);margin-bottom:var(--sp-sm);}
+.fcard p{font-size:15px;color:var(--body);}
+.fcard .ic{font-size:22px;margin-bottom:var(--sp-md);}
+h2.sec{font-size:44px;line-height:1.1;letter-spacing:-1px;margin-bottom:var(--sp-xl);}
+/* dark band */
+.dark{background:var(--surface-dark);color:var(--on-dark);}
+.dark h2.sec{color:var(--on-dark);}
+.benefit{display:flex;gap:var(--sp-md);padding:var(--sp-lg) 0;border-bottom:1px solid var(--surface-dark-elevated);}
+.benefit .n{font-family:var(--font-display);font-size:32px;color:var(--coral);min-width:52px;}
+.benefit h3{font-family:var(--font-body);font-size:18px;font-weight:500;color:var(--on-dark);margin-bottom:6px;}
+.benefit p{color:var(--on-dark-soft);font-size:15px;}
+/* kpi wall */
+.mcard{background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--r-lg);padding:var(--sp-xl);}
+.mcard .lbl{font-size:13px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;}
+.mcard .big{font-size:40px;font-weight:500;color:var(--ink);margin:10px 0 6px;}
+.up{color:var(--success);font-size:14px;}
+.down{color:var(--error);font-size:14px;}
+/* task status */
+.tcard{background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--r-lg);padding:var(--sp-xl);}
+.tcard .hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--sp-lg);}
+.tcard .ttl{font-size:18px;font-weight:500;color:var(--ink);}
+.prog{position:relative;height:10px;background:var(--surface-cream-strong);border-radius:var(--r-full);margin:var(--sp-md) 0 6px;}
+.prog .fill{position:absolute;left:0;top:0;bottom:0;background:var(--coral);border-radius:var(--r-full);}
+.prog .goal{position:absolute;top:-4px;bottom:-4px;width:2px;background:var(--ink);}
+.prog-cap{display:flex;justify-content:space-between;font-size:13px;color:var(--muted);}
+.metric-row{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid var(--hairline-soft);font-size:14px;}
+.metric-row .v{font-variant-numeric:tabular-nums;color:var(--ink);font-weight:500;}
+/* coral callout */
+.callout{background:var(--coral);color:#fff;border-radius:var(--r-lg);padding:var(--sp-xxl);}
+.callout h2{font-family:var(--font-display);font-size:32px;font-weight:400;letter-spacing:-0.3px;margin-bottom:var(--sp-md);color:#fff;}
+.callout p{color:rgba(255,255,255,.92);margin-bottom:var(--sp-lg);max-width:760px;}
+.ctable{width:100%;border-collapse:collapse;background:rgba(255,255,255,.08);border-radius:var(--r-md);overflow:hidden;}
+.ctable th,.ctable td{padding:12px 16px;text-align:left;font-size:14px;border-bottom:1px solid rgba(255,255,255,.15);}
+.ctable th{font-weight:500;color:#fff;}
+.ctable td{color:rgba(255,255,255,.92);}
+.ctable .hl{font-weight:600;color:#fff;font-variant-numeric:tabular-nums;}
+/* rules */
+.rule-card{background:var(--surface-card);border-radius:var(--r-lg);padding:var(--sp-xl);}
+.rule-card h3{font-family:var(--font-body);font-size:18px;font-weight:500;color:var(--ink);margin-bottom:var(--sp-md);}
+.rule-card ul{list-style:none;}
+.rule-card li{font-size:15px;color:var(--body);padding:6px 0 6px 20px;position:relative;}
+.rule-card li::before{content:"";position:absolute;left:0;top:14px;width:6px;height:6px;background:var(--coral);border-radius:50%;}
+.principle{background:var(--surface-dark);color:var(--on-dark);border-radius:var(--r-lg);padding:var(--sp-xl);margin-top:var(--sp-lg);}
+.principle .big{font-family:var(--font-display);font-size:28px;color:#fff;letter-spacing:-0.3px;}
+.principle .big em{color:var(--coral);font-style:normal;}
+/* calc / measure */
+.measure{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--sp-lg);}
+.mbox{background:var(--surface-dark-elevated);border-radius:var(--r-lg);padding:var(--sp-xl);}
+.mbox .lbl{color:var(--on-dark-soft);font-size:14px;text-transform:uppercase;letter-spacing:1px;}
+.mbox .gap{font-family:var(--font-display);font-size:56px;color:var(--coral);line-height:1.1;margin:10px 0;}
+.mbox .desc{color:var(--on-dark);font-size:15px;}
+.mbox .small{color:var(--on-dark-soft);font-size:13px;margin-top:8px;}
+/* action steps */
+.step{display:flex;gap:var(--sp-lg);align-items:flex-start;padding:var(--sp-lg);background:var(--surface-card);border-radius:var(--r-lg);margin-bottom:var(--sp-md);}
+.step .n{font-family:var(--font-display);font-size:28px;color:var(--coral);min-width:40px;}
+.step .t{font-size:16px;color:var(--body-strong);}
+.step .t b{color:var(--ink);}
+/* footer */
+.ft{background:var(--surface-dark);color:var(--on-dark-soft);padding:64px 0;}
+.ft .brand{display:flex;align-items:center;gap:10px;color:var(--on-dark);font-weight:600;margin-bottom:var(--sp-lg);}
+.ft p{font-size:13px;color:var(--on-dark-soft);margin:4px 0;}
+.warn-note{background:var(--surface-soft);border-left:3px solid var(--warning);border-radius:var(--r-sm);padding:var(--sp-lg);margin-top:var(--sp-lg);font-size:14px;color:var(--body);}
+/* history table */
+.htable{width:100%;border-collapse:collapse;font-size:14px;}
+.htable th,.htable td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--hairline);vertical-align:top;}
+.htable thead th{font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-size:12px;background:var(--surface-soft);}
+.htable td{color:var(--body);}
+.htable .mo{font-weight:500;color:var(--ink);white-space:nowrap;font-variant-numeric:tabular-nums;}
+.htable tr:hover{background:var(--surface-soft);}
+.tag-ok{display:inline-block;background:#dbf0df;color:#2f7d43;font-size:12px;font-weight:500;padding:3px 10px;border-radius:var(--r-full);white-space:nowrap;}
+.tag-no{display:inline-block;background:#f7edcf;color:#8a6d10;font-size:12px;font-weight:500;padding:3px 10px;border-radius:var(--r-full);white-space:nowrap;}
+.scroll-x{overflow-x:auto;}
+.legend{display:flex;gap:var(--sp-lg);margin-bottom:var(--sp-lg);font-size:13px;color:var(--muted);flex-wrap:wrap;}
+/* funnel */
+.funnel{display:flex;flex-direction:column;gap:var(--sp-xs);}
+.fstep{display:flex;align-items:center;justify-content:space-between;background:var(--surface-card);border-radius:var(--r-md);padding:14px 20px;}
+.fstep .lab{font-size:15px;color:var(--body-strong);}
+.fstep .val{font-family:var(--font-body);font-variant-numeric:tabular-nums;font-size:22px;font-weight:500;color:var(--ink);}
+.fstep.win{background:var(--surface-dark);}
+.fstep.win .lab{color:var(--on-dark);} .fstep.win .val{color:var(--coral);}
+.fstep.dim{opacity:.62;}
+.farrow{text-align:center;color:var(--muted-soft);font-size:14px;line-height:1;}
+.cond-tags{display:flex;gap:var(--sp-xs);flex-wrap:wrap;margin-top:var(--sp-md);}
+.cond{background:var(--canvas);border:1px solid var(--hairline);border-radius:var(--r-full);padding:6px 14px;font-size:13px;color:var(--body-strong);}
+.cond b{color:var(--coral);}
+/* two-goal split */
+.two-goal{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-md);margin-top:var(--sp-lg);}
+.tg-box{background:var(--surface-dark-elevated);border-radius:var(--r-md);padding:var(--sp-lg);}
+.tg-tag{display:inline-block;background:var(--coral);color:#fff;font-size:12px;font-weight:500;letter-spacing:1px;padding:3px 12px;border-radius:var(--r-full);margin-bottom:12px;}
+.tg-h{font-size:17px;font-weight:500;color:var(--on-dark);margin-bottom:10px;}
+.tg-box p{color:var(--on-dark-soft);font-size:14px;line-height:1.6;}
+.tg-box p b{color:var(--on-dark);}
+/* store list */
+.slist{width:100%;border-collapse:collapse;font-size:13px;}
+.slist th,.slist td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--hairline);}
+.slist thead th{font-weight:500;color:var(--muted);font-size:12px;background:var(--surface-soft);text-transform:uppercase;letter-spacing:.5px;}
+.slist td{color:var(--body);} .slist td.mono{font-variant-numeric:tabular-nums;}
+.slist tr:hover{background:var(--surface-soft);}
+.list-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:var(--sp-md);flex-wrap:wrap;gap:8px;}
+.list-head .cnt{font-family:var(--font-display);font-size:36px;color:var(--coral);}
+.list-note{font-size:14px;color:var(--muted);margin-bottom:var(--sp-lg);}
+.scrollbox{max-height:420px;overflow-y:auto;border:1px solid var(--hairline);border-radius:var(--r-lg);}
+.scrollbox thead th{position:sticky;top:0;}
+/* reward cards */
+.rw2{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-lg);}
+.rw-card{border:1px solid var(--hairline);border-radius:var(--r-lg);padding:var(--sp-xl);background:var(--canvas);}
+.rw-card .rw-t{font-size:18px;font-weight:500;color:var(--ink);margin-bottom:6px;}
+.rw-card .rw-sub{font-size:13px;color:var(--muted);margin-bottom:var(--sp-md);}
+.rw-line{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--hairline-soft);font-size:14px;color:var(--body);}
+.rw-line:last-child{border-bottom:none;}
+.rw-ic{color:var(--coral);font-weight:600;flex-shrink:0;}
+.rw-no{color:var(--error);} .rw-yes{color:var(--success);}
+.pill-cash{background:#dbf0df;color:#2f7d43;font-size:12px;font-weight:500;padding:3px 10px;border-radius:var(--r-full);}
+.pill-sub{background:#f3e7df;color:#a9583e;font-size:12px;font-weight:500;padding:3px 10px;border-radius:var(--r-full);}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;}.hero h1{font-size:44px;}
+  .grid3,.grid4,.grid2,.measure{grid-template-columns:1fr;}
+  h2.sec{font-size:32px;}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="hd">
+    <div class="brand"><span class="spike"></span>呈尚策划 · 生长计划</div>
+    <span class="badge-pill">数据快照 2026-07-22</span>
+  </header>
+</div>
+
+<!-- Hero -->
+<div class="wrap">
+<section class="hero">
+  <div>
+    <div class="eyebrow">呈尚策划 · 2026年7月 · 最新版</div>
+    <h1>7月生长计划</h1>
+    <p class="sub">每月必做的平台冲刺任务</p>
+    <p class="lead">平台每月给我们定商业化目标，完成即返广告补贴与现金。这是我们和平台关系的晴雨表——跟得紧、达得标，就能在平台面前刷足存在感，拿到真金白银的激励。</p>
+  </div>
+  <div class="kpi-hero">
+    <div class="lbl">广告渗透率（大盘）</div>
+    <div class="big num">70.42<span style="font-size:28px">%</span></div>
+    <div class="delta num">月环比 +12.56%</div>
+    <hr>
+    <div class="note">注意：大盘渗透率不等于达标渗透率，达标只看下方计件赛的分项数字。</div>
+  </div>
+</section>
+</div>
+
+<!-- 这是什么活动 -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">先搞懂</div>
+  <h2 class="sec">这是一个什么活动</h2>
+  <div class="grid3">
+    <div class="fcard">
+      <div class="ic">🎯</div>
+      <h3>一句话定义</h3>
+      <p>淘宝闪购（饿了么）平台每月给代运营服务商的"商业化冲刺任务"。我们帮平台把商户的广告做起来，平台按业绩返钱给我们。</p>
+    </div>
+    <div class="fcard">
+      <div class="ic">📢</div>
+      <h3>为什么天天在群里发</h3>
+      <p>它是平台每月最核心的服务商考核 + 激励活动。上线通知、进展战报、FAQ、达标通报、发放提醒——群里高频消息基本都围绕它。天天发＝平台天天在看我们的完成度。</p>
+    </div>
+    <div class="fcard">
+      <div class="ic">🔁</div>
+      <h3>每月更新，当任务做</h3>
+      <p>生长计划每月更新一次，门槛和玩法逐月变化。月初看目标、月中追进度、月末冲达标——把它当成一项固定的月度任务来推进。</p>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- 为什么重要 -->
+<div class="dark">
+<div class="wrap">
+<section>
+  <div class="eyebrow" style="color:var(--coral)">配合平台的好处</div>
+  <h2 class="sec">这个活动为什么重要</h2>
+  <div style="max-width:820px">
+    <div class="benefit"><div class="n num">01</div><div><h3>真金白银的返货</h3><p>达标就有广告补贴/现金，直接变成可发给商户的资源，或团队收益。</p></div></div>
+    <div class="benefit"><div class="n num">02</div><div><h3>在平台面前刷存在感</h3><p>生长计划 + 夏战排位赛都有榜单和战报，达标、上榜＝在平台面前露脸，被记住。</p></div></div>
+    <div class="benefit"><div class="n num">03</div><div><h3>评优加分</h3><p>夏战王者等荣誉直接关联"广告年度优质服务商评选加分"，影响长期合作地位。</p></div></div>
+    <div class="benefit"><div class="n num">04</div><div><h3>不掉队</h3><p>门槛逐月抬高，别人在冲、我们不动就会相对退步。跟紧每月任务＝保住身位。</p></div></div>
+    <div class="benefit" style="border-bottom:none"><div class="n num">05</div><div><h3>配合度信号</h3><p>积极参与＝向平台传递"我们是靠谱、配合度高的服务商"，利于后续资源倾斜。</p></div></div>
+  </div>
+</section>
+</div>
+</div>
+
+<!-- 数据现状 -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">7月我们的数据现状</div>
+  <h2 class="sec">大盘数据</h2>
+  <div class="grid4">
+    <div class="mcard"><div class="lbl">广告活跃商户数</div><div class="big num">396</div><div class="up num">↑ +67.80%</div></div>
+    <div class="mcard"><div class="lbl">广告渗透率（大盘）</div><div class="big num">70.42%</div><div class="up num">↑ +12.56%</div></div>
+    <div class="mcard"><div class="lbl">广告毛消耗</div><div class="big num">23,527</div><div class="up num">↑ +54.95%</div></div>
+    <div class="mcard"><div class="lbl">广告 PPC</div><div class="big num">0.25</div><div class="down num">↓ -32.05%</div></div>
+  </div>
+
+  <h2 class="sec" style="margin-top:var(--sp-section)">两个计件赛的达标现状</h2>
+  <div class="grid2">
+    <div class="tcard">
+      <div class="hdr"><span class="ttl">老店渗透增量计件赛</span><span class="badge-warn">兜底未达成</span></div>
+      <div class="prog"><div class="fill" style="width:69.12%"></div><div class="goal" style="left:70%"></div></div>
+      <div class="prog-cap"><span class="num">当前 69.12%</span><span class="num">目标 70%</span></div>
+      <div class="metric-row"><span>① 兜底渗透率增幅</span><span class="v">2.98pt / ≥1pt ✅</span></div>
+      <div class="metric-row"><span>① 保及格还差</span><span class="v" style="color:var(--coral)">约 4 家（任意消耗）</span></div>
+      <div class="metric-row"><span>② 达标门店数（赚钱）</span><span class="v">7 家（多做多得）</span></div>
+      <div class="metric-row" style="border-bottom:none"><span>② 可唤醒沉睡店</span><span class="v" style="color:var(--coral)">140 家（做到≥60）</span></div>
+    </div>
+    <div class="tcard">
+      <div class="hdr"><span class="ttl">新店核销计件赛</span><span class="badge-warn">兜底未达成</span></div>
+      <div class="prog"><div class="fill" style="width:69.71%"></div><div class="goal" style="left:70%"></div></div>
+      <div class="prog-cap"><span class="num">当前 69.71%</span><span class="num">目标 70%</span></div>
+      <div class="metric-row"><span>① 兜底渗透率增幅</span><span class="v">8.80pt / ≥1pt ✅</span></div>
+      <div class="metric-row"><span>① 保及格还差</span><span class="v" style="color:var(--coral)">约 2 家（任意消耗）</span></div>
+      <div class="metric-row"><span>② 达标门店数（赚钱）</span><span class="v">1 家（需破10家）</span></div>
+      <div class="metric-row" style="border-bottom:none"><span>② 待催核销</span><span class="v" style="color:var(--coral)">9 家（发券未核销）</span></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- 历月达标情况 -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">历史回顾</div>
+  <h2 class="sec">每月生长计划达标情况</h2>
+  <div class="legend">
+    <span><span class="tag-ok">已完成</span> 兜底达标</span>
+    <span><span class="tag-no">未达成</span> 兜底未达标</span>
+    <span>数据来源：服务商后台-广告管理-生长计划（截至 2026-07-22）</span>
+  </div>
+  <div class="scroll-x">
+  <table class="htable">
+    <thead><tr><th>月份</th><th>任务</th><th>满足条件（兜底门槛）</th><th>我们的进度</th><th>达标</th></tr></thead>
+    <tbody>
+      <tr><td class="mo" rowspan="2">1月</td><td>老店活跃增量计件赛</td><td>广告整体日均净消耗环比 ≥3%</td><td>—</td><td><span class="tag-ok">已完成</span></td></tr>
+      <tr><td>新店大额充返核销计件赛</td><td>广告整体净消耗环比 ≥3%</td><td>—</td><td><span class="tag-ok">已完成</span></td></tr>
+      <tr><td class="mo">2月</td><td>全国消耗返</td><td>消耗 ≥8,893 且 渗透率 ≥57%</td><td>消耗9,712（109%）/ 渗透60.14%</td><td><span class="tag-no">未达成*</span></td></tr>
+      <tr><td class="mo" rowspan="2">3月</td><td>新店核销计件赛</td><td>净消耗环比1月 ≥0%（兜底空）</td><td>—</td><td><span class="tag-ok">已完成</span></td></tr>
+      <tr><td>全国消耗返</td><td>消耗 ≥14,120 且 渗透率 ≥57%</td><td>消耗13,199（93%）/ 渗透57.28%</td><td><span class="tag-no">未达成*</span></td></tr>
+      <tr><td class="mo" rowspan="2">4月</td><td>老店渗透增量计件赛</td><td>净消耗 ≥1,000元（占位口径）</td><td>净消耗20,965</td><td><span class="tag-ok">已完成</span></td></tr>
+      <tr><td>新店核销计件赛</td><td>净消耗 ≥1,000元（占位口径）</td><td>净消耗20,965</td><td><span class="tag-ok">已完成</span></td></tr>
+      <tr><td class="mo" rowspan="2">5月</td><td>老店渗透增量计件赛</td><td>净消耗 ≥100,000元（占位，真实为渗透率≥65%）</td><td>净消耗30,503</td><td><span class="tag-no">未达成</span></td></tr>
+      <tr><td>新店核销计件赛</td><td>净消耗 ≥100,000元（占位，真实为渗透率≥65%）</td><td>净消耗30,503</td><td><span class="tag-no">未达成</span></td></tr>
+      <tr><td class="mo" rowspan="2">6月</td><td>老店渗透增量计件赛</td><td>净消耗 ≥100,000元（占位，真实为渗透率≥70%且+1pt）</td><td>净消耗35,008</td><td><span class="tag-no">未达成</span></td></tr>
+      <tr><td>新店核销计件赛</td><td>净消耗 ≥100,000元（占位，真实为渗透率≥65%且+5pt）</td><td>净消耗35,008</td><td><span class="tag-no">未达成</span></td></tr>
+      <tr><td class="mo" rowspan="2">7月</td><td>老店渗透增量计件赛</td><td>渗透率 ≥70% 且 环比 +1pt</td><td>渗透69.12% / 增幅2.98pt</td><td><span class="tag-no">未达成</span></td></tr>
+      <tr><td>新店核销计件赛</td><td>渗透率 ≥70% 且 环比 +1pt</td><td>渗透69.71% / 增幅8.80pt</td><td><span class="tag-no">未达成</span></td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="warn-note">
+    <b>门槛演变：</b>1-4月门槛极低（4月兜底仅"净消耗≥1,000元"，轻松达标）→ 5-6月暴涨到"净消耗≥10万"→ 7月改为"渗透率≥70%且+1pt"。<b>不是我们退步，是达标线一路抬高、考核维度从"消耗额"换成了"渗透率"。</b><br>
+    <b>*标注说明：</b>5-6月后台显示的净消耗门槛是"占位口径"——真实兜底其实也是渗透率，当时后台未开发渗透率显示，用净消耗字段临时占位，官方注明"显示进度仅为示意，真实进展以小二过程统计为准"。因此5-6月"未达成"不一定等于真实未达标，需向平台小二核实。2月、3月消耗返为"消耗达标但渗透率差一点"未全部达标。
+  </div>
+</section>
+</div>
+
+<!-- 珊瑚 callout：两个渗透率 -->
+<div class="wrap">
+<section>
+  <div class="callout">
+    <span class="badge-coral" style="background:rgba(255,255,255,.2)">最容易搞混的一点</span>
+    <h2 style="margin-top:16px">大盘渗透率 ≠ 达标渗透率</h2>
+    <p>后台有两个渗透率。总览的大盘 70.42% 是所有商户混合平均（被不考核的商户拉高了）；达标只认计件赛里分池子单独算的分项数字。就像总平均分及格，但要求"语文、数学单科都≥70"，两门单科都还差一点。</p>
+    <table class="ctable">
+      <tr><th>渗透率</th><th>位置</th><th>数值</th><th>口径</th></tr>
+      <tr><td>大盘渗透率</td><td>总览 / 数据大盘</td><td class="hl">70.42%</td><td>全盘商户混合平均</td></tr>
+      <tr><td>老店兜底渗透率</td><td>生长计划-老店赛</td><td class="hl">69.12%</td><td>仅"老店（满60天）"池子</td></tr>
+      <tr><td>新店兜底渗透率</td><td>生长计划-新店赛</td><td class="hl">69.71%</td><td>仅"新店（0-60天）"池子</td></tr>
+    </table>
+  </div>
+</section>
+</div>
+
+<!-- 判断规则 -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">判断规则</div>
+  <h2 class="sec">7月两大任务类型</h2>
+  <div class="grid2">
+    <div class="rule-card">
+      <h3>① 计件激励（计件赛）· 全量可参加</h3>
+      <ul>
+        <li><b>老店赛</b>：老店新增活跃商户、月累计消耗≥60元；每达标商户奖20元，单商封顶2万</li>
+        <li><b>新店赛</b>：新店完成大额充返核销＋消耗≥200元；每达标商户奖50元（补贴20+现金30），封顶5万</li>
+        <li>兜底门槛：渗透率≥70% 且 环比+1pt（不过不发钱）</li>
+        <li>新店额外硬门槛：达标门店数需破10家才进入激励档位</li>
+      </ul>
+    </div>
+    <div class="rule-card">
+      <h3>② 消耗返活动 · 仅高潜服务商</h3>
+      <ul>
+        <li>双考核：消耗进度≥目标 且 渗透率≥目标，两项同时达标</li>
+        <li>返货：约6%（分档），单服务商封顶10万</li>
+        <li>后台查不到＝本月未达参与门槛</li>
+        <li>需做大动销商户数＋消耗规模，争取下月入围</li>
+      </ul>
+    </div>
+  </div>
+  <div class="principle">
+    <div class="eyebrow" style="color:var(--coral)">关键：这里有两个不同的目标，别搞混</div>
+    <div class="big">先过 <em>兜底渗透率（及格线）</em>，再冲 <em>达标门店数（赚奖励）</em>。</div>
+    <div class="two-goal">
+      <div class="tg-box">
+        <div class="tg-tag">目标一 · 及格线</div>
+        <div class="tg-h">兜底渗透率 ≥ 70% 且 环比 +1pt</div>
+        <p>过了才有资格拿钱。口径很松——门店本月产生<b>任意</b>广告消耗（哪怕1毛钱）就算"渗透"。渗透率 = 渗透门店数 ÷ 目标商户总数。<b>随便激活几家沉睡店就能过。</b></p>
+      </div>
+      <div class="tg-box">
+        <div class="tg-tag">目标二 · 赚奖励</div>
+        <div class="tg-h">达标门店数（每家奖 20 元）</div>
+        <p>过了及格线后，平台按"达标门店数"发钱。门槛高得多——要"上月睡、本月醒"且消耗≥60 的<b>增量店</b>。<b>转化越多家，拿的钱越多（单商封顶2万）。</b></p>
+      </div>
+    </div>
+    <p style="color:var(--on-dark-soft);margin-top:20px;font-size:14px">类比：兜底渗透率像"考试及格"（60分就行，很容易）；达标门店数像"考多少分拿多少奖学金"（分越高钱越多）。所以"还差4家"是为了及格，"140家"是为了刷高分。</p>
+  </div>
+</section>
+</div>
+
+<!-- 达标测算 dark -->
+<div class="dark">
+<div class="wrap">
+<section>
+  <div class="eyebrow" style="color:var(--coral)">达标测算 · 两个目标分开算</div>
+  <h2 class="sec">我们还差多少</h2>
+
+  <h3 style="font-family:var(--font-body);font-size:15px;font-weight:500;color:var(--on-dark-soft);letter-spacing:1px;margin-bottom:var(--sp-md)">目标一 · 先过及格线（兜底渗透率70%）</h3>
+  <div class="measure">
+    <div class="mbox">
+      <div class="lbl">老店赛 · 保及格</div>
+      <div class="gap num">4 家</div>
+      <div class="desc">再激活约 4 家沉睡店产生<b>任意</b>消耗，渗透率即从 69.12% 顶过 70%。</div>
+      <div class="small num">目标 432 × 70% = 需 ≥303 家渗透（当前约 299 家）</div>
+    </div>
+    <div class="mbox">
+      <div class="lbl">新店赛 · 保及格</div>
+      <div class="gap num">2 家</div>
+      <div class="desc">再多约 2 家门店渗透即可达 70%。</div>
+      <div class="small num">目标 436 × 70% = 需 ≥306 家渗透（当前约 304 家）</div>
+    </div>
+  </div>
+
+  <h3 style="font-family:var(--font-body);font-size:15px;font-weight:500;color:var(--on-dark-soft);letter-spacing:1px;margin:var(--sp-xxl) 0 var(--sp-md)">目标二 · 再冲赚钱（达标门店数，每家奖钱）</h3>
+  <div class="measure">
+    <div class="mbox">
+      <div class="lbl">老店赛 · 赚奖励</div>
+      <div class="gap num">7 → 越多越好</div>
+      <div class="desc">当前 7 家达标（每家20元）。把 <b>140 家沉睡店</b>尽量多地唤醒、每家消耗做到≥60，每转化一家多一个达标门店。</div>
+      <div class="small num">单商封顶 2 万，上不封顶多做多得</div>
+    </div>
+    <div class="mbox">
+      <div class="lbl">新店赛 · 赚奖励</div>
+      <div class="gap num">1 / 10 家</div>
+      <div class="desc">当前仅 1 家达标，<b>需凑够 10 家</b>才进入发钱档。先催 <b>9 家已发券未核销</b>的店核销、再冲消耗≥200。</div>
+      <div class="small num">每家奖50元（补贴20+现金30），单商封顶5万</div>
+    </div>
+  </div>
+  <p style="color:var(--on-dark-soft);margin-top:24px;font-size:14px">增幅条件（≥1pt）两赛道都已远超，无需再管。"还差X家"为估算值，以后台实时数据和小二过程统计为准。具体要操作的店铺清单见下一节。</p>
+</section>
+</div>
+</div>
+
+<!-- 计入达标门店的判定 -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">数据明细分析</div>
+  <h2 class="sec">哪种店铺才计入"达标门店数"</h2>
+  <p style="max-width:820px;color:var(--body);margin-bottom:var(--sp-xl)">计件赛奖励的是<b style="color:var(--ink)">增量</b>——把一个原本不投广告的店本月拉起来投广告并达到门槛。已经在投的存量活跃店、纯高消耗店都不直接计入。下面是两个赛从全部门店筛到达标门店的漏斗（数据已与后台汇总表核对一致）。</p>
+  <div class="grid2">
+    <div>
+      <h3 style="font-family:var(--font-body);font-size:18px;font-weight:500;color:var(--ink);margin-bottom:var(--sp-md)">老店渗透增量计件赛</h3>
+      <div class="funnel">
+        <div class="fstep"><span class="lab">去重门店总数</span><span class="val">354</span></div>
+        <div class="farrow">↓ 进入作业池子（净消耗≥60）</div>
+        <div class="fstep"><span class="lab">作业池 &amp; 当月活跃</span><span class="val">55</span></div>
+        <div class="farrow">↓ 剔除上月已活跃的存量店</div>
+        <div class="fstep dim"><span class="lab">存量店（上月也活跃，不计入）</span><span class="val">48</span></div>
+        <div class="fstep win"><span class="lab">✅ 计入达标：作业池 &amp; 当月活跃 &amp; 上月不活跃</span><span class="val">7</span></div>
+      </div>
+      <div class="cond-tags">
+        <span class="cond">① 进作业池 <b>净消耗≥60</b></span>
+        <span class="cond">② <b>当月</b>广告有效活跃</span>
+        <span class="cond">③ <b>上月不</b>活跃（增量）</span>
+      </div>
+    </div>
+    <div>
+      <h3 style="font-family:var(--font-body);font-size:18px;font-weight:500;color:var(--ink);margin-bottom:var(--sp-md)">新店核销计件赛</h3>
+      <div class="funnel">
+        <div class="fstep"><span class="lab">去重门店总数</span><span class="val">344</span></div>
+        <div class="farrow">↓ 大额充返券已发放</div>
+        <div class="fstep"><span class="lab">已发放</span><span class="val">9</span></div>
+        <div class="farrow">↓ 把券核销掉</div>
+        <div class="fstep"><span class="lab">已核销</span><span class="val">3</span></div>
+        <div class="farrow">↓ 核销 + 消耗≥200 + 当月活跃</div>
+        <div class="fstep win"><span class="lab">✅ 计入达标：核销且有效活跃</span><span class="val">1</span></div>
+      </div>
+      <div class="cond-tags">
+        <span class="cond">① 大额充返<b>已核销</b></span>
+        <span class="cond">② 进作业池 <b>消耗≥200</b></span>
+        <span class="cond">③ <b>当月</b>广告有效活跃</span>
+      </div>
+    </div>
+  </div>
+  <div class="warn-note">
+    <b>怎么增加达标门店：</b>老店赛——去激活"上月没投广告"的老店，本月让它净消耗≥60并有效活跃（存量的48家不算增量）。新店赛——卡点在核销率（9家发券→仅3家核销→1家活跃），先推核销、再把消耗做到≥200、并确保活跃；新店赛还需达标门店破10家才进激励档，当前仅1家，缺口大。
+  </div>
+</section>
+</div>
+
+<!-- 奖励形式说明 -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">奖励怎么拿</div>
+  <h2 class="sec">达标奖励是什么 · 能提现吗</h2>
+  <p style="max-width:820px;color:var(--body);margin-bottom:var(--sp-xl)">奖励分<b style="color:var(--ink)">广告补贴</b>和<b style="color:var(--ink)">现金</b>两种。<b style="color:var(--ink)">老店赛拿到的基本是广告补贴（不能提现）</b>；新店赛攒够1000元以上才有部分现金。别以为达标就是发钱到账。</p>
+  <div class="rw2">
+    <div class="rw-card">
+      <div class="rw-t">🎟️ 广告补贴 <span class="pill-sub">不可提现</span></div>
+      <div class="rw-sub">老店赛全部 + 新店赛的一部分</div>
+      <div class="rw-line"><span class="rw-ic">用途</span><span>只能用于广告消耗抵扣，发给任意门店（新老店均可）做广告折扣券/充值返</span></div>
+      <div class="rw-line"><span class="rw-ic rw-no">✕</span><span><b>不能提现、不能开票</b></span></div>
+      <div class="rw-line"><span class="rw-ic">有效期</span><span>一般到<b>当月月底</b>（如7.31 24点），逾期失效不补发</span></div>
+      <div class="rw-line"><span class="rw-ic">发放</span><span>一旦发放无法撤回，需平台小二审批后生效，要预留时间</span></div>
+      <div class="rw-line"><span class="rw-ic">限制</span><span>单门店上限≤1万，不可发给品牌</span></div>
+    </div>
+    <div class="rw-card">
+      <div class="rw-t">💵 现金激励 <span class="pill-cash">可变现</span></div>
+      <div class="rw-sub">仅新店核销计件赛，且有门槛</div>
+      <div class="rw-line"><span class="rw-ic">门槛</span><span>整体激励<b>&lt;1000元 → 100%发广告补贴</b>（没有现金）</span></div>
+      <div class="rw-line"><span class="rw-ic">拆分</span><span>&gt;1000元时按 <b>60%现金 + 40%广告补贴</b> 发放</span></div>
+      <div class="rw-line"><span class="rw-ic rw-yes">✓</span><span>现金走<b>"见票付款"</b>：联系小二 → 提供<b>发票</b>和打款信息 → 平台对公打款</span></div>
+      <div class="rw-line"><span class="rw-ic">有效期</span><span>现金发放有截止日，超期视为自动放弃、取消激励</span></div>
+    </div>
+  </div>
+  <div class="warn-note">
+    <b>一句话：</b>老店赛的20元/店是"只能拿去投广告的补贴券"，不是现金；新店赛50元/店里，只有攒够1000元以上才有60%变现金，且要开发票走对公打款。<br>
+    <b>待核实：</b>老店赛是否也适用"低于1000元全发广告补贴"的拆分规则，现有资料只明确了新店赛，建议向平台小二确认。
+  </div>
+</section>
+</div>
+
+<!-- 可操作店铺清单 -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">拿去执行</div>
+  <h2 class="sec">可操作店铺清单（在后台按门店ID找）</h2>
+  <p class="list-note">以下清单直接从两份数据明细表筛出，每条带门店ID和负责人，运营在服务商后台按ID定位即可操作。完整版见 Excel：<b>7月生长计划-可操作店铺清单.xlsx</b>。</p>
+
+  <div style="margin-bottom:var(--sp-xxl)">
+    <div class="list-head">
+      <div><span class="cnt num">140</span> <span style="font-size:18px;color:var(--ink)">家 · 老店待唤醒</span></div>
+      <span class="badge-pill">筛选：上月不活跃 且 当月还没活跃</span>
+    </div>
+    <p class="list-note">要它们做什么：本月投广告，把总产线净消耗做到 <b>≥60元</b>。做到即当月活跃、又因上月不活跃 → 新增1个达标门店（每家奖20元）。其中任意激活约4家即可先保住兜底渗透率及格线。</p>
+    <div class="scrollbox">
+    <table class="slist">
+      <thead><tr><th>#</th><th>门店名称</th><th>门店ID</th><th>当前净消耗</th></tr></thead>
+      <tbody>
+<tr><td class="mono">1</td><td>招财猫卤菜</td><td class="mono">519938985</td><td class="mono">0</td></tr>
+<tr><td class="mono">2</td><td>瑶妹石磨手工肠粉店</td><td class="mono">523319142</td><td class="mono">0</td></tr>
+<tr><td class="mono">3</td><td>水城羊肉粉</td><td class="mono">529975135</td><td class="mono">0</td></tr>
+<tr><td class="mono">4</td><td>宾好家常菜</td><td class="mono">531230492</td><td class="mono">0</td></tr>
+<tr><td class="mono">5</td><td>1996藤椒抄手洋芋饭</td><td class="mono">533825071</td><td class="mono">0</td></tr>
+<tr><td class="mono">6</td><td>烟火小灶·炒饭·盖浇饭</td><td class="mono">536096829</td><td class="mono">0</td></tr>
+<tr><td class="mono">7</td><td>新疆玫瑰花羊肉烧烤</td><td class="mono">540402793</td><td class="mono">0</td></tr>
+<tr><td class="mono">8</td><td>黄家馒头包子(楚街店)</td><td class="mono">539181160</td><td class="mono">0</td></tr>
+<tr><td class="mono">9</td><td>福花小吃（砂锅菜米线饵丝盖饭）</td><td class="mono">540771359</td><td class="mono">0</td></tr>
+<tr><td class="mono">10</td><td>吉祥味道·赣南土菜(杨梅新村店)</td><td class="mono">540953741</td><td class="mono">0</td></tr>
+<tr><td class="mono">11</td><td>梁姐怀集云吞(丽晶店)</td><td class="mono">540952735</td><td class="mono">0</td></tr>
+<tr><td class="mono">12</td><td>新疆古丽羊肉烧烤</td><td class="mono">541844220</td><td class="mono">0</td></tr>
+<tr><td class="mono">13</td><td>姜姜好热卤(保利店)</td><td class="mono">542474360</td><td class="mono">0</td></tr>
+<tr><td class="mono">14</td><td>马一洒河州特色包子</td><td class="mono">542290945</td><td class="mono">0</td></tr>
+<tr><td class="mono">15</td><td>丽姐胡辣汤鸡蛋脑</td><td class="mono">542930469</td><td class="mono">0</td></tr>
+<tr><td class="mono">16</td><td>鼎香薄皮蒸饺</td><td class="mono">542720857</td><td class="mono">0</td></tr>
+<tr><td class="mono">17</td><td>小媚姐石磨肠粉</td><td class="mono">543034920</td><td class="mono">0</td></tr>
+<tr><td class="mono">18</td><td>恩施梅孃孃豆皮</td><td class="mono">543006424</td><td class="mono">0</td></tr>
+<tr><td class="mono">19</td><td>新疆手撕椒麻鸡(桃园店)</td><td class="mono">543612529</td><td class="mono">0</td></tr>
+<tr><td class="mono">20</td><td>越乡杭州小笼包</td><td class="mono">543745037</td><td class="mono">0</td></tr>
+<tr><td class="mono">21</td><td>包吉多·包子·面(中央北路店)</td><td class="mono">1239607601</td><td class="mono">0</td></tr>
+<tr><td class="mono">22</td><td>唐姐早餐店·东北大包子</td><td class="mono">1304257803</td><td class="mono">0</td></tr>
+<tr><td class="mono">23</td><td>遇巷隐食</td><td class="mono">1302028043</td><td class="mono">0</td></tr>
+<tr><td class="mono">24</td><td>华蜀卤菜(南岗店)</td><td class="mono">1302979832</td><td class="mono">0</td></tr>
+<tr><td class="mono">25</td><td>（慕澜府）兰州牛肉拉面(东方医院店)</td><td class="mono">1313117214</td><td class="mono">0</td></tr>
+<tr><td class="mono">26</td><td>穆尚人家春台手抓面片</td><td class="mono">1312817542</td><td class="mono">0</td></tr>
+<tr><td class="mono">27</td><td>嗨饭铁板炒饭</td><td class="mono">1316510787</td><td class="mono">0</td></tr>
+<tr><td class="mono">28</td><td>岳阳烧烤</td><td class="mono">1317659761</td><td class="mono">0</td></tr>
+<tr><td class="mono">29</td><td>满街香过桥米线</td><td class="mono">1322361955</td><td class="mono">0</td></tr>
+<tr><td class="mono">30</td><td>回味里牛肉面(锦都园店)</td><td class="mono">1327972840</td><td class="mono">0</td></tr>
+<tr><td class="mono">31</td><td>嘟妈手工馄饨饺子(临钢店)</td><td class="mono">1329529497</td><td class="mono">0</td></tr>
+<tr><td class="mono">32</td><td>津市牛肉粉</td><td class="mono">1333636222</td><td class="mono">0</td></tr>
+<tr><td class="mono">33</td><td>邻家小笼包</td><td class="mono">1331007389</td><td class="mono">0</td></tr>
+<tr><td class="mono">34</td><td>土耳其烤肉饭·家常菜馆(幼专二食堂店)</td><td class="mono">1338034887</td><td class="mono">0</td></tr>
+<tr><td class="mono">35</td><td>马老二自助餐</td><td class="mono">1334991014</td><td class="mono">0</td></tr>
+<tr><td class="mono">36</td><td>杭州小笼包(山西大医院店)</td><td class="mono">1335019725</td><td class="mono">0</td></tr>
+<tr><td class="mono">37</td><td>邻家小食·炖鸡饭</td><td class="mono">1335525307</td><td class="mono">0</td></tr>
+<tr><td class="mono">38</td><td>八鲜馄饨</td><td class="mono">1335541890</td><td class="mono">0</td></tr>
+<tr><td class="mono">39</td><td>芝士火鸡烤冷面</td><td class="mono">1337093464</td><td class="mono">0</td></tr>
+<tr><td class="mono">40</td><td>百香福·手撕鸡架(河兴庄店)</td><td class="mono">1338078914</td><td class="mono">0</td></tr>
+<tr><td class="mono">41</td><td>点味皇食品·广式包点</td><td class="mono">1340177009</td><td class="mono">0</td></tr>
+<tr><td class="mono">42</td><td>艳霞大排粉面馆</td><td class="mono">1341990965</td><td class="mono">0</td></tr>
+<tr><td class="mono">43</td><td>鲜禾卤（原渝记荣昌卤鹅）</td><td class="mono">1342995719</td><td class="mono">0</td></tr>
+<tr><td class="mono">44</td><td>冯记粉馆</td><td class="mono">1343013315</td><td class="mono">0</td></tr>
+<tr><td class="mono">45</td><td>满堂欢米粉(万达店)</td><td class="mono">1342999732</td><td class="mono">0</td></tr>
+<tr><td class="mono">46</td><td>吴记东北家常菜水饺</td><td class="mono">1344275013</td><td class="mono">0</td></tr>
+<tr><td class="mono">47</td><td>盈樽烧烤啤酒屋</td><td class="mono">1352227412</td><td class="mono">0</td></tr>
+<tr><td class="mono">48</td><td>嘎嘎香鸭</td><td class="mono">1352100372</td><td class="mono">0</td></tr>
+<tr><td class="mono">49</td><td>蟠桃里·私房菜</td><td class="mono">524466734</td><td class="mono">0</td></tr>
+<tr><td class="mono">50</td><td>赵老大拉条子拌面·手抓饭（原防洪渠店）</td><td class="mono">529853899</td><td class="mono">0</td></tr>
+<tr><td class="mono">51</td><td>满口福面馆</td><td class="mono">533330014</td><td class="mono">0</td></tr>
+<tr><td class="mono">52</td><td>烧烤大师(华坚店)</td><td class="mono">532667145</td><td class="mono">0</td></tr>
+<tr><td class="mono">53</td><td>老粥楼记(市政府店)</td><td class="mono">533939243</td><td class="mono">0</td></tr>
+<tr><td class="mono">54</td><td>芳园小馆（盖浇饭·小炒·面条）(二中店)</td><td class="mono">535663894</td><td class="mono">0</td></tr>
+<tr><td class="mono">55</td><td>崔少野米线小笼包</td><td class="mono">536686737</td><td class="mono">0</td></tr>
+<tr><td class="mono">56</td><td>小乐淳凉拌菜</td><td class="mono">536738707</td><td class="mono">0</td></tr>
+<tr><td class="mono">57</td><td>老上海馄饨铺(八一社区店)</td><td class="mono">537081542</td><td class="mono">0</td></tr>
+<tr><td class="mono">58</td><td>陈记后安粉</td><td class="mono">537447943</td><td class="mono">0</td></tr>
+<tr><td class="mono">59</td><td>一口食光(猛火现炒小碗菜)</td><td class="mono">539046703</td><td class="mono">0</td></tr>
+<tr><td class="mono">60</td><td>老轱董·特色小吃(米轨公园店)</td><td class="mono">539357552</td><td class="mono">0</td></tr>
+<tr><td class="mono">61</td><td>@姐姐甜品</td><td class="mono">540514043</td><td class="mono">0</td></tr>
+<tr><td class="mono">62</td><td>无肉不饭·家常小炒(吾悦广场店)</td><td class="mono">540916687</td><td class="mono">0</td></tr>
+<tr><td class="mono">63</td><td>遇稻手作饭团(思北店)</td><td class="mono">541582377</td><td class="mono">0</td></tr>
+<tr><td class="mono">64</td><td>兴氏浓汤螺蛳粉</td><td class="mono">541543169</td><td class="mono">0</td></tr>
+<tr><td class="mono">65</td><td>田记口福饼</td><td class="mono">542301673</td><td class="mono">0</td></tr>
+<tr><td class="mono">66</td><td>华毅粉店</td><td class="mono">542460090</td><td class="mono">0</td></tr>
+<tr><td class="mono">67</td><td>新疆艾克热木烤羊肉店</td><td class="mono">542484318</td><td class="mono">0</td></tr>
+<tr><td class="mono">68</td><td>知味卤舍</td><td class="mono">542780983</td><td class="mono">0</td></tr>
+<tr><td class="mono">69</td><td>森里轻食</td><td class="mono">543490569</td><td class="mono">0</td></tr>
+<tr><td class="mono">70</td><td>酥小排香酥排骨(兰田步行街百味胡同店)</td><td class="mono">543494466</td><td class="mono">0</td></tr>
+<tr><td class="mono">71</td><td>叫啥龙虾</td><td class="mono">543444984</td><td class="mono">0</td></tr>
+<tr><td class="mono">72</td><td>超辣餐饮店</td><td class="mono">543831581</td><td class="mono">0</td></tr>
+<tr><td class="mono">73</td><td>香辣田螺(庄樱路店)</td><td class="mono">543450682</td><td class="mono">0</td></tr>
+<tr><td class="mono">74</td><td>琳馨园老玉溪风味小吃(火车北站店)</td><td class="mono">543551472</td><td class="mono">0</td></tr>
+<tr><td class="mono">75</td><td>粤广广东烧鹅饭</td><td class="mono">543610464</td><td class="mono">0</td></tr>
+<tr><td class="mono">76</td><td>老板板面</td><td class="mono">544595852</td><td class="mono">0</td></tr>
+<tr><td class="mono">77</td><td>吃吧自助(金枫豪庭店)</td><td class="mono">1157658266</td><td class="mono">0</td></tr>
+<tr><td class="mono">78</td><td>糯糯香炒鸡</td><td class="mono">1313100434</td><td class="mono">0</td></tr>
+<tr><td class="mono">79</td><td>罗记热干面粉馆(幸福一村店)</td><td class="mono">1310739171</td><td class="mono">0</td></tr>
+<tr><td class="mono">80</td><td>老味馆烧烤(巨亿万达店)</td><td class="mono">1315304526</td><td class="mono">0</td></tr>
+<tr><td class="mono">81</td><td>阜阳粉鸡(阜阳卷馍)</td><td class="mono">1319969565</td><td class="mono">0</td></tr>
+<tr><td class="mono">82</td><td>东北饺子王</td><td class="mono">1319858251</td><td class="mono">0</td></tr>
+<tr><td class="mono">83</td><td>辣鲜食光•益阳麻辣烫</td><td class="mono">1325675671</td><td class="mono">0</td></tr>
+<tr><td class="mono">84</td><td>灌饼煎饼(天苑店)</td><td class="mono">1328088072</td><td class="mono">0</td></tr>
+<tr><td class="mono">85</td><td>一品窝子面(灌河路盐库岭店)</td><td class="mono">1328582584</td><td class="mono">0</td></tr>
+<tr><td class="mono">86</td><td>火锅冒菜·炸炸</td><td class="mono">1328085256</td><td class="mono">0</td></tr>
+<tr><td class="mono">87</td><td>王炸麻辣烫（南昌拌粉炸串湖里店）</td><td class="mono">1332142114</td><td class="mono">0</td></tr>
+<tr><td class="mono">88</td><td>曹小韩米线</td><td class="mono">1328583428</td><td class="mono">0</td></tr>
+<tr><td class="mono">89</td><td>黄牛集插花牛肉汤(华都名城店)</td><td class="mono">1333694060</td><td class="mono">0</td></tr>
+<tr><td class="mono">90</td><td>查特熊(海西路店)</td><td class="mono">1334958893</td><td class="mono">0</td></tr>
+<tr><td class="mono">91</td><td>王宝强黄焖鸡米饭(华池山水国际店)</td><td class="mono">1334026003</td><td class="mono">0</td></tr>
+<tr><td class="mono">92</td><td>嘎嘎攒劲鸭</td><td class="mono">1338437467</td><td class="mono">0</td></tr>
+<tr><td class="mono">93</td><td>豫香斋烧麦包子胡辣汤(回坊店)</td><td class="mono">1335020912</td><td class="mono">0</td></tr>
+<tr><td class="mono">94</td><td>一卤一冒</td><td class="mono">1338946919</td><td class="mono">0</td></tr>
+<tr><td class="mono">95</td><td>夏合扎提烤肉(红庙子店)</td><td class="mono">1338976782</td><td class="mono">0</td></tr>
+<tr><td class="mono">96</td><td>老银川花姐麻辣烫</td><td class="mono">1338996106</td><td class="mono">0</td></tr>
+<tr><td class="mono">97</td><td>即食自选快餐厅·快餐盒饭</td><td class="mono">1338063921</td><td class="mono">0</td></tr>
+<tr><td class="mono">98</td><td>烹渔（正宗川味冷锅鱼.芸豆蹄花）</td><td class="mono">1341412882</td><td class="mono">0</td></tr>
+<tr><td class="mono">99</td><td>龙二哥老素粉</td><td class="mono">1340938525</td><td class="mono">0</td></tr>
+<tr><td class="mono">100</td><td>海哥小龙虾(南坪店)</td><td class="mono">1342950685</td><td class="mono">0</td></tr>
+<tr><td class="mono">101</td><td>火爆鱿鱼铁板鸭肠</td><td class="mono">1341439988</td><td class="mono">0</td></tr>
+<tr><td class="mono">102</td><td>莉梓香过桥米线(云和家园店)</td><td class="mono">1342432843</td><td class="mono">0</td></tr>
+<tr><td class="mono">103</td><td>赣味轩江西小炒(池店店)</td><td class="mono">1341994850</td><td class="mono">0</td></tr>
+<tr><td class="mono">104</td><td>腾香麻辣条</td><td class="mono">1342940375</td><td class="mono">0</td></tr>
+<tr><td class="mono">105</td><td>鲜鲜馄饨(大桥镇店)</td><td class="mono">1352124326</td><td class="mono">0</td></tr>
+<tr><td class="mono">106</td><td>君聚来臻品手工水饺店</td><td class="mono">512737567</td><td class="mono">0</td></tr>
+<tr><td class="mono">107</td><td>严记石磨肠粉</td><td class="mono">530120265</td><td class="mono">0</td></tr>
+<tr><td class="mono">108</td><td>四川小厨</td><td class="mono">535270762</td><td class="mono">0</td></tr>
+<tr><td class="mono">109</td><td>张记豆花面(户部山店)</td><td class="mono">535576300</td><td class="mono">0</td></tr>
+<tr><td class="mono">110</td><td>劉記淮南牛肉汤火锅</td><td class="mono">535596580</td><td class="mono">0</td></tr>
+<tr><td class="mono">111</td><td>150商店超级啤酒工厂(烧烤)</td><td class="mono">538671196</td><td class="mono">0</td></tr>
+<tr><td class="mono">112</td><td>螺小螺螺蛳粉</td><td class="mono">538633988</td><td class="mono">0</td></tr>
+<tr><td class="mono">113</td><td>满当当快餐</td><td class="mono">540951427</td><td class="mono">0</td></tr>
+<tr><td class="mono">114</td><td>李记私房猪脚面/羊肉粉(幸福公园店)</td><td class="mono">542322304</td><td class="mono">0</td></tr>
+<tr><td class="mono">115</td><td>猴哥爆炒(东盟森林店)</td><td class="mono">542498434</td><td class="mono">0</td></tr>
+<tr><td class="mono">116</td><td>VShow</td><td class="mono">542691306</td><td class="mono">0</td></tr>
+<tr><td class="mono">117</td><td>吴记家常馆</td><td class="mono">543026428</td><td class="mono">0</td></tr>
+<tr><td class="mono">118</td><td>石尚锅小馆（食堂店）</td><td class="mono">542618964</td><td class="mono">0</td></tr>
+<tr><td class="mono">119</td><td>瑞晟祥·烧豆花·2两肉馅饼(莲花店)</td><td class="mono">542906185</td><td class="mono">0</td></tr>
+<tr><td class="mono">120</td><td>山野烤铺(76-1-15)</td><td class="mono">543477772</td><td class="mono">0</td></tr>
+<tr><td class="mono">121</td><td>马大姐熟食</td><td class="mono">543366785</td><td class="mono">0</td></tr>
+<tr><td class="mono">122</td><td>湄潭茶香牛菜馆</td><td class="mono">1261069346</td><td class="mono">0</td></tr>
+<tr><td class="mono">123</td><td>咬卵犟砂锅串串</td><td class="mono">1300660943</td><td class="mono">0</td></tr>
+<tr><td class="mono">124</td><td>泉羊膳食</td><td class="mono">1304035374</td><td class="mono">0</td></tr>
+<tr><td class="mono">125</td><td>晓当家跷脚羊肉粉</td><td class="mono">1312127243</td><td class="mono">0</td></tr>
+<tr><td class="mono">126</td><td>珍珍炸串</td><td class="mono">1313931781</td><td class="mono">0</td></tr>
+<tr><td class="mono">127</td><td>蜀乡牛老成都牛肉馆</td><td class="mono">1316604334</td><td class="mono">0</td></tr>
+<tr><td class="mono">128</td><td>俊哥·馒头黄</td><td class="mono">1325558270</td><td class="mono">0</td></tr>
+<tr><td class="mono">129</td><td>老淮安小脚卷·羊肉汤(大润发店)</td><td class="mono">1328569585</td><td class="mono">0</td></tr>
+<tr><td class="mono">130</td><td>二师兄猪脚饭(南外店)</td><td class="mono">1333693931</td><td class="mono">0</td></tr>
+<tr><td class="mono">131</td><td>鸿祥牛杂面</td><td class="mono">1334017223</td><td class="mono">0</td></tr>
+<tr><td class="mono">132</td><td>满街香小吃·生煎·煎饺</td><td class="mono">1340365791</td><td class="mono">0</td></tr>
+<tr><td class="mono">133</td><td>雪花米饺包点(飞虹路店)</td><td class="mono">1338051393</td><td class="mono">0</td></tr>
+<tr><td class="mono">134</td><td>浩哥烧烤</td><td class="mono">1340986587</td><td class="mono">0</td></tr>
+<tr><td class="mono">135</td><td>炸串铺(长空路店)</td><td class="mono">1342401919</td><td class="mono">0</td></tr>
+<tr><td class="mono">136</td><td>喜桃粤式主题餐厅</td><td class="mono">1342818923</td><td class="mono">0</td></tr>
+<tr><td class="mono">137</td><td>独一处私厨</td><td class="mono">1345735057</td><td class="mono">0</td></tr>
+<tr><td class="mono">138</td><td>笑酥坊唐山棋子烧饼</td><td class="mono">1351009434</td><td class="mono">0</td></tr>
+<tr><td class="mono">139</td><td>御唐秦味(马浜店)</td><td class="mono">1351011965</td><td class="mono">0</td></tr>
+<tr><td class="mono">140</td><td>常宁鱼粉店(石井红星店)</td><td class="mono">1352162369</td><td class="mono">0</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+
+  <div>
+    <div class="list-head">
+      <div><span class="cnt num">9</span> <span style="font-size:18px;color:var(--ink)">家 · 新店待催核销</span></div>
+      <span class="badge-pill">筛选：大额充返券已发放 但 未核销</span>
+    </div>
+    <p class="list-note">要它们做什么：第1步 催商家把大额充返券<b>核销</b>掉（当前最大卡点）；第2步 核销后把净消耗做到 <b>≥200元</b>并保持活跃。新店赛需凑够10家达标才发钱，当前仅1家。</p>
+    <div class="scrollbox">
+    <table class="slist">
+      <thead><tr><th>#</th><th>门店名称</th><th>门店ID</th><th>当前净消耗</th></tr></thead>
+      <tbody>
+<tr><td class="mono">1</td><td>嘎嘎香鸭</td><td class="mono">1352100372</td><td class="mono">0</td></tr>
+<tr><td class="mono">2</td><td>老阙川式龙虾烧烤</td><td class="mono">1351274542</td><td class="mono">59.6</td></tr>
+<tr><td class="mono">3</td><td>老板板面</td><td class="mono">544595852</td><td class="mono">0</td></tr>
+<tr><td class="mono">4</td><td>鲜鲜馄饨(大桥镇店)</td><td class="mono">1352124326</td><td class="mono">0</td></tr>
+<tr><td class="mono">5</td><td>热汤.鸡汤米线</td><td class="mono">1353345469</td><td class="mono">1.8</td></tr>
+<tr><td class="mono">6</td><td>石磨豆花</td><td class="mono">544605818</td><td class="mono">8.4</td></tr>
+<tr><td class="mono">7</td><td>笑酥坊唐山棋子烧饼</td><td class="mono">1351009434</td><td class="mono">0</td></tr>
+<tr><td class="mono">8</td><td>御唐秦味(马浜店)</td><td class="mono">1351011965</td><td class="mono">0</td></tr>
+<tr><td class="mono">9</td><td>常宁鱼粉店(石井红星店)</td><td class="mono">1352162369</td><td class="mono">0</td></tr>
+      </tbody>
+    </table>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- 行动清单 -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">怎么冲刺</div>
+  <h2 class="sec">给运营的行动清单</h2>
+  <div class="step"><div class="n num">1</div><div class="t"><b>先保及格线</b><br>从140家沉睡店里挑最容易激活的<b>约4家</b>，做出任意广告消耗，把兜底渗透率顶过70%——拿到发钱资格。</div></div>
+  <div class="step"><div class="n num">2</div><div class="t"><b>再冲赚钱（老店）</b><br>把140家沉睡店尽量多地唤醒，每家净消耗做到<b>≥60元</b>并有效活跃。每转化一家＝多一个达标门店、多20元。</div></div>
+  <div class="step"><div class="n num">3</div><div class="t"><b>催新店核销</b><br>催上面9家已发券未核销的店尽快<b>核销</b>，再把消耗做到≥200并保持活跃。新店赛需凑够10家才进发钱档。</div></div>
+  <div class="step"><div class="n num">4</div><div class="t"><b>按ID到后台操作</b><br>用可操作清单里的门店ID，在后台-广告管理-生长计划-数据明细中定位每家店，逐个跟进。</div></div>
+  <div class="warn-note">⚠️ 需向平台小二核实的口径：渗透门店是否有最低消耗额门槛、6月环比基准渗透率确切值、渗透率分母是否有额外剔除。测算为估算值，以后台实时数据为准。</div>
+</section>
+</div>
+
+<!-- 页脚 -->
+<div class="ft">
+<div class="wrap">
+  <div class="brand"><span class="spike"></span>生长计划 · 代运营服务商</div>
+  <p>数据来源：服务商后台「广告管理」+ 钉钉群「淘宝闪购·外卖代运营·服务商群」+ 官方《7月生长计划活动一页纸》</p>
+  <p>数据快照时间：2026-07-22（后台数据生产时间 2026-07-21）</p>
+  <p>本页为 2026年7月最新版。生长计划每月更新，下月需替换页面中的数据。达标以后台实时数据与平台小二过程统计为准。</p>
+</div>
+</div>
+</body>
+</html>
