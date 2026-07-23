@@ -164,9 +164,28 @@ h2.sec{font-size:44px;line-height:1.1;letter-spacing:-1px;margin-bottom:var(--sp
 .rw-no{color:var(--error);} .rw-yes{color:var(--success);}
 .pill-cash{background:#dbf0df;color:#2f7d43;font-size:12px;font-weight:500;padding:3px 10px;border-radius:var(--r-full);}
 .pill-sub{background:#f3e7df;color:#a9583e;font-size:12px;font-weight:500;padding:3px 10px;border-radius:var(--r-full);}
+/* July execution scope */
+.scope-lead{max-width:860px;color:var(--body);font-size:16px;}
+.scope-table{width:100%;border-collapse:collapse;font-size:14px;margin-top:var(--sp-xl);}
+.scope-table th,.scope-table td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--hairline);vertical-align:top;}
+.scope-table th{font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;background:var(--surface-soft);}
+.scope-table td{color:var(--body);}
+.scope-table td:first-child{font-weight:500;color:var(--ink);white-space:nowrap;}
+.scope-table b{color:var(--ink);}
+.scope-grid{display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-lg);margin-top:var(--sp-xl);}
+.scope-card{background:var(--surface-card);border-radius:var(--r-lg);padding:var(--sp-xl);}
+.scope-card h3{font-family:var(--font-body);font-size:18px;font-weight:500;color:var(--ink);margin-bottom:var(--sp-md);}
+.scope-card ul{list-style:none;}
+.scope-card li{font-size:14px;color:var(--body);padding:6px 0 6px 20px;position:relative;}
+.scope-card li::before{content:"";position:absolute;left:0;top:14px;width:6px;height:6px;background:var(--coral);border-radius:50%;}
+.scope-chain{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--sp-md);margin-top:var(--sp-xl);}
+.scope-chain .chain-item{border-top:2px solid var(--coral);padding-top:var(--sp-md);}
+.scope-chain .chain-num{font-family:var(--font-display);font-size:28px;color:var(--coral);}
+.scope-chain .chain-title{font-weight:500;color:var(--ink);font-size:15px;margin:4px 0;}
+.scope-chain .chain-text{font-size:13px;color:var(--muted);line-height:1.6;}
 @media(max-width:900px){
   .hero{grid-template-columns:1fr;}.hero h1{font-size:44px;}
-  .grid3,.grid4,.grid2,.measure{grid-template-columns:1fr;}
+  .grid3,.grid4,.grid2,.measure,.scope-grid,.scope-chain{grid-template-columns:1fr;}
   h2.sec{font-size:32px;}
 }
 </style>
@@ -372,6 +391,51 @@ h2.sec{font-size:44px;line-height:1.1;letter-spacing:-1px;margin-bottom:var(--sp
     </div>
     <p style="color:var(--on-dark-soft);margin-top:20px;font-size:14px">类比：兜底渗透率像"考试及格"（60分就行，很容易）；达标门店数像"考多少分拿多少奖学金"（分越高钱越多）。所以"还差4家"是为了及格，"140家"是为了刷高分。</p>
   </div>
+</section>
+</div>
+
+<!-- 7月实际执行口径 -->
+<div class="wrap">
+<section>
+  <div class="eyebrow">7月实际执行口径</div>
+  <h2 class="sec">哪些付费推广消耗会计入累计金额</h2>
+  <p class="scope-lead">运营执行时只认后台活动统计的<b>“全部产品线净消耗”</b>。也就是说，付费推广工具必须被平台归入当前活动的产品线，并且消耗已经同步进门店的净消耗字段；充值、补贴到账、非广告服务费用或外部投放金额，不能直接当作生长计划消耗。</p>
+  <div class="scroll-x">
+    <table class="scope-table">
+      <thead><tr><th>使用场景</th><th>会计入的消耗口径</th><th>还必须满足</th><th>后台核对字段</th></tr></thead>
+      <tbody>
+        <tr><td>兜底渗透率</td><td>目标门店产生平台认可的广告净消耗即可；当前资料口径为“有消耗即渗透”，金额多少不影响是否渗透。</td><td>门店必须属于对应的老店/新店活动池。</td><td><b>是否渗透</b>、目标商户池</td></tr>
+        <tr><td>老店达标奖励</td><td>所有有效产品线合计的<b>全部产线净消耗 ≥ 60 元</b>。</td><td>本月广告有效活跃，且上月不活跃，才算增量达标店。</td><td><b>全部产线净消耗</b>、广告有效活跃、上月活跃状态</td></tr>
+        <tr><td>新店达标奖励</td><td>所有有效产品线合计的<b>全部产线净消耗 ≥ 200 元</b>。</td><td>先完成大额充返核销，再保持本月广告有效活跃；新店赛达标门店数还要破 10 家才进入发钱档。</td><td><b>大额充返是否核销</b>、全部产线净消耗、广告有效活跃</td></tr>
+        <tr><td>消耗返活动</td><td>以该月活动页面列出的产品线和净消耗目标为准，不自动沿用计件赛口径。</td><td>消耗目标和渗透率目标必须同时达标；年框/品牌签约门店按活动规则剔除。</td><td>活动产品线、净消耗进度、渗透率进度</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="scope-grid">
+    <div class="scope-card">
+      <h3>可以作为执行动作的付费推广</h3>
+      <ul>
+        <li>选择服务商后台当前活动“产品线”范围内的付费推广工具。</li>
+        <li>优先选择门店正常可投、并能在数据明细里看到净消耗增长的工具。</li>
+        <li>不需要为了凑工具数量重复投放，最终只看门店的“全部产线净消耗”汇总。</li>
+      </ul>
+    </div>
+    <div class="scope-card">
+      <h3>不能直接当作累计消耗</h3>
+      <ul>
+        <li>充值金额、广告补贴到账金额、抵扣券面额本身。</li>
+        <li>非广告服务费用、自然流量成交、外部平台投放。</li>
+        <li>尚未同步到活动数据明细的流水；必须以后台净消耗字段更新为准。</li>
+      </ul>
+    </div>
+  </div>
+  <div class="scope-chain">
+    <div class="chain-item"><div class="chain-num">01</div><div class="chain-title">选对门店</div><div class="chain-text">从老店/新店可操作清单定位目标门店。</div></div>
+    <div class="chain-item"><div class="chain-num">02</div><div class="chain-title">做付费推广</div><div class="chain-text">使用后台当前活动认可的产品线，让门店产生广告净消耗。</div></div>
+    <div class="chain-item"><div class="chain-num">03</div><div class="chain-title">看净消耗字段</div><div class="chain-text">回到数据明细确认“全部产线净消耗”已经增长。</div></div>
+    <div class="chain-item"><div class="chain-num">04</div><div class="chain-title">按赛道验收</div><div class="chain-text">老店验收 60 元+增量，新店验收核销+200 元+活跃。</div></div>
+  </div>
+  <div class="warn-note"><b>执行提醒：</b>“任意广告消耗”只适用于渗透率是否激活的判断；要计入达标门店奖励，老店仍需净消耗 ≥60 元，新店仍需净消耗 ≥200 元。若后台没有明确显示某工具属于当前活动产品线，先向平台小二确认，不要把该笔费用直接算入。</div>
 </section>
 </div>
 
